@@ -32,6 +32,7 @@ int main()
         switch (option)
         {
         case 1:
+        
             cout << "Your string before reverse:\n";
             print_string(user_string);
 
@@ -39,9 +40,19 @@ int main()
 
             cout << "Your string after reverse:\n";
             print_string(user_string);
+
             break;
         case 2:
-            //palindrome
+
+            if(is_polindrome(user_string))
+            {
+                cout << "Your string is polindrome\n";
+            }
+            else
+            {
+                cout << "Your string is NOT polindrome\n";
+            }
+
             break;
         case 3:
             //word count

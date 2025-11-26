@@ -24,3 +24,20 @@ void print_string(string user_str)
 
     cout << "\n";
 }
+
+bool is_polindrome(string user_str)
+{
+    string user_str_copy = user_str;
+
+    reverse_string(user_str);
+
+    for (int i = 0; i < user_str.length(); i++)
+    {
+        if(user_str_copy[i] != user_str[i])
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
