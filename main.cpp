@@ -21,16 +21,24 @@ int main()
         cout << "Your choice: ";
         cin >> option;
 
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
         if(option > 0 && option < 6)
         {
             cout << "Enter your string:\n";
-            cin >> user_string;
+            getline(cin, user_string);
         }
-        
+
         switch (option)
         {
         case 1:
-            //string reverse
+            cout << "Your string before reverse:\n";
+            print_string(user_string);
+
+            reverse_string(user_string);
+
+            cout << "Your string after reverse:\n";
+            print_string(user_string);
             break;
         case 2:
             //palindrome
