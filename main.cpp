@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int option = 0;
+    int option = 0, word_count = 0;
 
     string user_string;
 
@@ -32,7 +32,7 @@ int main()
         switch (option)
         {
         case 1:
-        
+
             cout << "Your string before reverse:\n";
             print_string(user_string);
 
@@ -55,7 +55,10 @@ int main()
 
             break;
         case 3:
-            //word count
+
+            word_count = count_words(user_string);
+            cout << "Word count of your string is: " << word_count << "\n";
+
             break;
         case 4:
             //remove additional chars

@@ -41,3 +41,32 @@ bool is_polindrome(string user_str)
 
     return true;
 }
+
+int count_words(string user_str)
+{
+    if(user_str.length() == 0)
+    {
+        return 0;
+    }
+
+    int count = 0;
+    bool was_in_word_flag = false;
+
+    for (int i = 0; i < user_str.length(); i++)
+    {
+        if(user_str[i] == ' ')
+        {
+            was_in_word_flag = false;
+        }
+        else
+        {
+            if (was_in_word_flag == false)
+            {
+                count++;
+                was_in_word_flag = true;
+            }
+        }
+    }
+
+    return count;
+}
