@@ -17,10 +17,6 @@ void reverse_string(string& user_str)
 
 void print_string(string user_str)
 {
-    // for (int i = 0; i < user_str.length(); i++)
-    // {
-    //     cout << user_str[i];
-    // }
     int i = 0;
 
     while(user_str[i] != '\0')
@@ -114,6 +110,34 @@ string sanitize_text(char user_symbol, string& user_string)
     {
         user_string[i] = new_str[i];
     }
+
+    user_string[new_str.size() + 1] = '\0';
+
+    return user_string;
+}
+
+string trim_string(string& user_string, int new_lenght)
+{
+    if(new_lenght <= 0 || new_lenght >= user_string.length())
+    {
+        cout << "wrong lenght\n";
+        return user_string;
+    }
+
+    vector<char> new_str;
+
+    for (int i = 0; i < new_lenght; i++)
+    {
+        new_str.push_back(user_string[i]);
+        user_string[i] = 0;
+    }
+
+    for (int i = 0; i < new_str.size(); i++)
+    {
+        user_string[i] = new_str[i];
+    }
+
+    user_string[new_lenght + 1] = '\0';
 
     return user_string;
 }

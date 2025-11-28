@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int option = 0, word_count = 0;
+    int option = 0, word_count = 0, new_lenght = 0;
     char user_symbol = 0;
 
     string user_string;
@@ -63,7 +63,7 @@ int main()
             
             break;
         case 4:
-        
+
             cout << "Enter char to remove from string:\n";
             cin >> user_symbol;
 
@@ -74,7 +74,14 @@ int main()
 
             break;
         case 5:
-            //string trim
+
+            cout << "Enter new size of string:\n";
+            cin >> new_lenght;
+
+            user_string = trim_string(user_string, new_lenght);
+            cout << "Your string after cut:\n";
+            print_string(user_string);
+            
             break; 
         case 0:
             cout <<"Exit\n";
