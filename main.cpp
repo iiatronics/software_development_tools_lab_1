@@ -5,6 +5,7 @@ using namespace std;
 int main()
 {
     int option = 0, word_count = 0;
+    char user_symbol = 0;
 
     string user_string;
 
@@ -58,10 +59,19 @@ int main()
 
             word_count = count_words(user_string);
             cout << "Word count of your string is: " << word_count << "\n";
-
+            count_words_occurrences(user_string);
+            
             break;
         case 4:
-            //remove additional chars
+        
+            cout << "Enter char to remove from string:\n";
+            cin >> user_symbol;
+
+            user_string = sanitize_text(user_symbol, user_string);
+
+            cout << "String with removed [" << user_symbol << "] from string:\n";
+            print_string(user_string);
+
             break;
         case 5:
             //string trim
