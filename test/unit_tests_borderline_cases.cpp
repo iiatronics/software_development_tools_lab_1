@@ -47,3 +47,25 @@ TEST(string_func_extreme_test, polindrome_check_with_capital)
 
     ASSERT_EQ(expected, input) << "string is changed to its polindrome\n";
 }
+
+//count words
+TEST(string_func_extreme_test, extreme_string_word_count_blank) 
+{
+    string input = "";
+
+    ASSERT_EQ(0, count_words(input));
+}
+
+TEST(string_func_extreme_test, extreme_string_word_count_space) 
+{
+    string input = "   ";
+
+    ASSERT_EQ(0, count_words(input));
+}
+
+TEST(string_func_extreme_test, extreme_string_word_count_space_extra) 
+{
+    string input = "hello   world my  name    is     Iia";
+
+    ASSERT_EQ(6, count_words(input));
+}
