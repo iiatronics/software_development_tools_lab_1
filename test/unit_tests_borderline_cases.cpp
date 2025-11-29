@@ -39,9 +39,9 @@ TEST(string_func_extreme_test, polindrome_check_with_spaces)
 
 TEST(string_func_extreme_test, polindrome_check_with_capital)
 {
-    string input = "mADam";
+    string input = "mADam maDAm";
 
-    string expected = "maDAm";
+    string expected = "madammadam";
 
     ASSERT_TRUE(is_polindrome(input));
 

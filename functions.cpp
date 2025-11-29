@@ -31,6 +31,12 @@ void print_string(string user_str)
 bool is_polindrome(string& user_str)
 {
     sanitize_text(' ', user_str);
+
+    for (char &c : user_str) 
+    {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+    }
+
     string user_str_copy = user_str;
 
     reverse_string(user_str);
