@@ -29,9 +29,10 @@ TEST(string_func_extreme_test, polindrome_check_with_spaces)
 {
     string input = "a bc c ba";
 
-    string expected = "ab c cb a";
+    string expected = "abccba";
 
     ASSERT_TRUE(is_polindrome(input));
+
 
     ASSERT_EQ(expected, input) << "string is changed to its polindrome\n";
 }

@@ -28,8 +28,9 @@ void print_string(string user_str)
     cout << "\n";
 }
 
-bool is_polindrome(string user_str)
+bool is_polindrome(string& user_str)
 {
+    sanitize_text(' ', user_str);
     string user_str_copy = user_str;
 
     reverse_string(user_str);
