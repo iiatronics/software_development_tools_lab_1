@@ -103,15 +103,14 @@ string sanitize_text(char user_symbol, string& user_string)
             new_str.push_back(user_string[i]);
         }
 
-        user_string[i] = 0;
     }
+
+    user_string.clear();
 
     for (int i = 0; i < new_str.size(); i++)
     {
-        user_string[i] = new_str[i];
+        user_string.push_back(new_str[i]);
     }
-
-    user_string[new_str.size() + 1] = '\0';
 
     return user_string;
 }

@@ -4,7 +4,9 @@
 using testing::internal::CaptureStdout;
 using testing::internal::GetCapturedStdout;
 
-TEST(string_func_regular_test, reverse_string)//regular input
+//TEST for basic use, without exeptions
+
+TEST(string_func_regular_test, reverse_string)
 {
     string input = "hello world";
 
@@ -41,7 +43,7 @@ TEST(string_func_regular_test, average_occurrences_in_str)
 {
     string input = "radiohead ra dio head radio head radiohehe ra ra ra";
     
-    string expected_output = "dio [1]\nhead [2]\nra [3]\nradio [1]\nradiohead [1]\nradiohehe [1]\n";
+    string expected_output = "dio [1]\nhead [2]\nra [4]\nradio [1]\nradiohead [1]\nradiohehe [1]\n";
 
     testing::internal::CaptureStdout(); 
     count_words_occurrences(input);
