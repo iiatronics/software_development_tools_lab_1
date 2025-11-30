@@ -98,3 +98,37 @@ TEST(string_func_extreme_test, extreme_string_word_count_occurrance_space)
     ASSERT_EQ(expected_output, actual_output) << "wrong word count\n";
 }
 
+//sanitize string (remove char from string)
+
+TEST(string_func_regular_test, remove_extreme_character) 
+{
+    string input = "";
+    char symbol_to_remove = '@';
+    string expected = "";
+
+    string actual = sanitize_text(symbol_to_remove, input);
+
+    ASSERT_EQ(expected, actual) << "not correct\n";
+}
+
+TEST(string_func_regular_test, remove_extreme_character_blank) 
+{
+    string input = "hello world";
+    char symbol_to_remove = 0;
+    string expected = "hello world";
+
+    string actual = sanitize_text(symbol_to_remove, input);
+
+    ASSERT_EQ(expected, actual) << "not correct\n";
+}
+
+TEST(string_func_regular_test, remove_extreme_character_wrong) 
+{
+    string input = "hello world";
+    char symbol_to_remove = '@';
+    string expected = "hello world";
+
+    string actual = sanitize_text(symbol_to_remove, input);
+
+    ASSERT_EQ(expected, actual) << "not correct\n";
+}
