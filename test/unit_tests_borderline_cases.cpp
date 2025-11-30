@@ -100,7 +100,7 @@ TEST(string_func_extreme_test, extreme_string_word_count_occurrance_space)
 
 //sanitize string (remove char from string)
 
-TEST(string_func_regular_test, remove_extreme_character) 
+TEST(string_func_extreme_test, remove_extreme_character) 
 {
     string input = "";
     char symbol_to_remove = '@';
@@ -111,7 +111,7 @@ TEST(string_func_regular_test, remove_extreme_character)
     ASSERT_EQ(expected, actual) << "not correct\n";
 }
 
-TEST(string_func_regular_test, remove_extreme_character_blank) 
+TEST(string_func_extreme_test, remove_extreme_character_blank) 
 {
     string input = "hello world";
     char symbol_to_remove = 0;
@@ -122,7 +122,7 @@ TEST(string_func_regular_test, remove_extreme_character_blank)
     ASSERT_EQ(expected, actual) << "not correct\n";
 }
 
-TEST(string_func_regular_test, remove_extreme_character_wrong) 
+TEST(string_func_extreme_test, remove_extreme_character_wrong) 
 {
     string input = "hello world";
     char symbol_to_remove = '@';
@@ -131,4 +131,39 @@ TEST(string_func_regular_test, remove_extreme_character_wrong)
     string actual = sanitize_text(symbol_to_remove, input);
 
     ASSERT_EQ(expected, actual) << "not correct\n";
+}
+
+//trim string func
+
+TEST(string_func_extreme_test, extreme_trim_wrong_length) 
+{
+    string input = "hello world";
+    int new_length = 99;
+    string expected = "hello world"; 
+
+    string actual = trim_string(input, new_length);
+    
+    ASSERT_EQ(expected, actual.substr(0, new_length)); 
+}
+
+TEST(string_func_extreme_test, extreme_trim_wrong_length_2) 
+{
+    string input = "hello world";
+    int new_length = -3;
+    string expected = "hello world"; 
+
+    string actual = trim_string(input, new_length);
+    
+    ASSERT_EQ(expected, actual.substr(0, new_length)); 
+}
+
+TEST(string_func_extreme_test, extreme_trim_blank) 
+{
+    string input = "";
+    int new_length = 3;
+    string expected = ""; 
+
+    string actual = trim_string(input, new_length);
+    
+    ASSERT_EQ(expected, actual.substr(0, new_length)); 
 }
