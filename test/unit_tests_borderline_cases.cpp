@@ -69,3 +69,32 @@ TEST(string_func_extreme_test, extreme_string_word_count_space_extra)
 
     ASSERT_EQ(6, count_words(input));
 }
+
+//count word occurrances
+
+TEST(string_func_extreme_test, extreme_string_word_count_occurrance_blank) 
+{
+    string input = "";
+    
+    string expected_output = "";
+
+    testing::internal::CaptureStdout(); 
+    count_words_occurrences(input);
+    string actual_output = testing::internal::GetCapturedStdout();
+
+    ASSERT_EQ(expected_output, actual_output) << "wrong word count\n";
+}
+
+TEST(string_func_extreme_test, extreme_string_word_count_occurrance_space) 
+{
+    string input = "   ";
+    
+    string expected_output = "";
+
+    testing::internal::CaptureStdout(); 
+    count_words_occurrences(input);
+    string actual_output = testing::internal::GetCapturedStdout();
+
+    ASSERT_EQ(expected_output, actual_output) << "wrong word count\n";
+}
+
