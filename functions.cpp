@@ -28,8 +28,15 @@ void print_string(string user_str)
     cout << "\n";
 }
 
-bool is_polindrome(string user_str)
+bool is_polindrome(string& user_str)
 {
+    sanitize_text(' ', user_str);
+
+    for (char &c : user_str) 
+    {
+        c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+    }
+
     string user_str_copy = user_str;
 
     reverse_string(user_str);
@@ -103,15 +110,14 @@ string sanitize_text(char user_symbol, string& user_string)
             new_str.push_back(user_string[i]);
         }
 
-        user_string[i] = 0;
     }
+
+    user_string.clear();
 
     for (int i = 0; i < new_str.size(); i++)
     {
-        user_string[i] = new_str[i];
+        user_string.push_back(new_str[i]);
     }
-
-    user_string[new_str.size() + 1] = '\0';
 
     return user_string;
 }
