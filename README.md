@@ -17,20 +17,6 @@ The program provides a user menu with the following capabilities:
 * **Testing:** Google Test (GTest)
 * **Build System:** CMake
 
-### Program Compilation:
-
-```bash
-##g++ main.cpp functions.cpp -o string_app
-```
-
-### UNIT test compilation and run:
-```
-mkdir build
-cd build
-cmake ..
-cmake --build .
-ctest
-```
 ## Project structure
 ```
 ├── main.cpp                  # Main program file (Menu)
@@ -40,4 +26,5 @@ ctest
 └── test/                     # Folder with tests
     ├── unit_tests.cpp
     └── unit_tests_borderline_cases.cpp
-    
+```
+## Documentation
