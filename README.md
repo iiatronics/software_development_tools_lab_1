@@ -17,7 +17,6 @@ The program provides a user menu with the following capabilities:
 * **Testing:** Google Test (GTest)
 * **Build System:** CMake
 
-<<<<<<< HEAD
 ### Program Compilation:
 
 ```bash
