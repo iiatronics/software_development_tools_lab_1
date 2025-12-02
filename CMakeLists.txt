@@ -11,14 +11,15 @@ add_library(core_lib
 
 target_include_directories(core_lib PUBLIC ${CMAKE_SOURCE_DIR})
 
-add_executable(main_exec main.cpp)
-target_link_libraries(main_exec PRIVATE core_lib)
+# add_executable(main_exec main.cpp)
+# target_link_libraries(main_exec PRIVATE core_lib)
 
 include(FetchContent)
 
 FetchContent_Declare(
     googletest
     URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
 )
 
 set(gtest_force_shared_crt ON CACHE BOOL "Force shared CRT for GTest" FORCE)
