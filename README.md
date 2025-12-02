@@ -17,6 +17,7 @@ The program provides a user menu with the following capabilities:
 * **Testing:** Google Test (GTest)
 * **Build System:** CMake
 
+<<<<<<< HEAD
 ### Program Compilation:
 
 ```bash
@@ -29,3 +30,14 @@ cd build
 cmake ..
 cmake --build .
 ctest
+=======
+## Project structure
+```
+├── main.cpp                  # Main program file (Menu)
+├── functions.cpp             # Implementation of string processing functions
+├── header.h                  # Header file
+├── CMakeLists.txt            # Build configuration for tests
+└── test/                     # Folder with tests
+    ├── unit_tests.cpp
+    └── unit_tests_borderline_cases.cpp
+>>>>>>> f0320a38beb516976aaf39617ccba766c4f1822c
