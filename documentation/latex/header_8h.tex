@@ -1,0 +1,196 @@
+\doxysection{Файл header.\+h}
+\hypertarget{header_8h}{}\label{header_8h}\index{header.h@{header.h}}
+
+
+Заголовний файл для лабораторної роботи №2.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Діаграма включених заголовочних файлів для header.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{header_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Функції}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{header_8h_a53cb1a503cd1b494978a4b76b0f59c62}{reverse\+\_\+string}} (string \&user\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Змінює порядок символів у рядку на зворотний. Функція працює безпосередньо з переданим рядком (in-\/place), змінюючи оригінальний об\textquotesingle{}єкт. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a70fcb8ebedfa2be738d7b637a5f33024}{print\+\_\+string}} (string user\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Виводить рядок у консоль посимвольно. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{header_8h_a801260d210038ef703d28f6b8a735c31}{is\+\_\+polindrome}} (string \&user\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Перевіряє, чи є рядок паліндромом. Перевірка ігнорує регістр літер (A == a) та пробіли. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_ae7177822fc1f48e26653b511503202d9}{count\+\_\+words}} (string user\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Підраховує кількість слів у рядку. Словом вважається будь-\/яка послідовність символів, розділена пробілами. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_aec4e3009215e950b2168666ce27a7c66}{count\+\_\+words\+\_\+occurrences}} (string user\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Аналізує частоту появи кожного слова в тексті. Результат виводиться безпосередньо в консоль у форматі\+: word \mbox{[}count\mbox{]}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{header_8h_aaa63a88c6be33f66931b460577daa11b}{sanitize\+\_\+text}} (char user\+\_\+symbol, string \&user\+\_\+string)
+\begin{DoxyCompactList}\small\item\em Видаляє всі входження заданого символу з рядка. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{header_8h_ad0dcc800fdcb8e716d50fa1622d10a25}{trim\+\_\+string}} (string \&user\+\_\+string, int new\+\_\+lenght)
+\begin{DoxyCompactList}\small\item\em Обрізає рядок до вказаної довжини. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Детальний опис}
+Заголовний файл для лабораторної роботи №2. 
+
+\begin{DoxyAuthor}{Автор}
+Яцкова Ія 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{header_8h_doc-func-members}
+\doxysubsection{Опис функцій}
+\Hypertarget{header_8h_ae7177822fc1f48e26653b511503202d9}\index{header.h@{header.h}!count\_words@{count\_words}}
+\index{count\_words@{count\_words}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{count\_words()}{count\_words()}}
+{\footnotesize\ttfamily \label{header_8h_ae7177822fc1f48e26653b511503202d9} 
+int count\+\_\+words (\begin{DoxyParamCaption}\item[{string}]{user\+\_\+str}{}\end{DoxyParamCaption})}
+
+
+
+Підраховує кількість слів у рядку. Словом вважається будь-\/яка послідовність символів, розділена пробілами. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+str} & Вхідний рядок. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+int Кількість знайдених слів. 
+\end{DoxyReturn}
+\Hypertarget{header_8h_aec4e3009215e950b2168666ce27a7c66}\index{header.h@{header.h}!count\_words\_occurrences@{count\_words\_occurrences}}
+\index{count\_words\_occurrences@{count\_words\_occurrences}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{count\_words\_occurrences()}{count\_words\_occurrences()}}
+{\footnotesize\ttfamily \label{header_8h_aec4e3009215e950b2168666ce27a7c66} 
+void count\+\_\+words\+\_\+occurrences (\begin{DoxyParamCaption}\item[{string}]{user\+\_\+str}{}\end{DoxyParamCaption})}
+
+
+
+Аналізує частоту появи кожного слова в тексті. Результат виводиться безпосередньо в консоль у форматі\+: word \mbox{[}count\mbox{]}. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+str} & Рядок для аналізу. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a801260d210038ef703d28f6b8a735c31}\index{header.h@{header.h}!is\_polindrome@{is\_polindrome}}
+\index{is\_polindrome@{is\_polindrome}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{is\_polindrome()}{is\_polindrome()}}
+{\footnotesize\ttfamily \label{header_8h_a801260d210038ef703d28f6b8a735c31} 
+bool is\+\_\+polindrome (\begin{DoxyParamCaption}\item[{string \&}]{user\+\_\+str}{}\end{DoxyParamCaption})}
+
+
+
+Перевіряє, чи є рядок паліндромом. Перевірка ігнорує регістр літер (A == a) та пробіли. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+str} & Посилання на рядок для перевірки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+true Якщо рядок є паліндромом. 
+
+false Якщо рядок не є паліндромом. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{string}\ s\ =\ \textcolor{stringliteral}{"{}Race\ Car"{}};}
+\DoxyCodeLine{\textcolor{keywordtype}{bool}\ result\ =\ \mbox{\hyperlink{header_8h_a801260d210038ef703d28f6b8a735c31}{is\_polindrome}}(s);\ \textcolor{comment}{//\ true}}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a70fcb8ebedfa2be738d7b637a5f33024}\index{header.h@{header.h}!print\_string@{print\_string}}
+\index{print\_string@{print\_string}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{print\_string()}{print\_string()}}
+{\footnotesize\ttfamily \label{header_8h_a70fcb8ebedfa2be738d7b637a5f33024} 
+void print\+\_\+string (\begin{DoxyParamCaption}\item[{string}]{user\+\_\+str}{}\end{DoxyParamCaption})}
+
+
+
+Виводить рядок у консоль посимвольно. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+str} & Рядок для виводу (передається як константа). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a53cb1a503cd1b494978a4b76b0f59c62}\index{header.h@{header.h}!reverse\_string@{reverse\_string}}
+\index{reverse\_string@{reverse\_string}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{reverse\_string()}{reverse\_string()}}
+{\footnotesize\ttfamily \label{header_8h_a53cb1a503cd1b494978a4b76b0f59c62} 
+void reverse\+\_\+string (\begin{DoxyParamCaption}\item[{string \&}]{user\+\_\+str}{}\end{DoxyParamCaption})}
+
+
+
+Змінює порядок символів у рядку на зворотний. Функція працює безпосередньо з переданим рядком (in-\/place), змінюючи оригінальний об\textquotesingle{}єкт. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+str} & Посилання на рядок, який потрібно перевернути. 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{string}\ s\ =\ \textcolor{stringliteral}{"{}hello"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{header_8h_a53cb1a503cd1b494978a4b76b0f59c62}{reverse\_string}}(s);\ }
+\DoxyCodeLine{\textcolor{comment}{//\ s\ стає\ "{}olleh"{}\ }}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_aaa63a88c6be33f66931b460577daa11b}\index{header.h@{header.h}!sanitize\_text@{sanitize\_text}}
+\index{sanitize\_text@{sanitize\_text}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{sanitize\_text()}{sanitize\_text()}}
+{\footnotesize\ttfamily \label{header_8h_aaa63a88c6be33f66931b460577daa11b} 
+string sanitize\+\_\+text (\begin{DoxyParamCaption}\item[{char}]{user\+\_\+symbol}{, }\item[{string \&}]{user\+\_\+string}{}\end{DoxyParamCaption})}
+
+
+
+Видаляє всі входження заданого символу з рядка. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+symbol} & Символ, який потрібно видалити. \\
+\hline
+{\em user\+\_\+string} & Посилання на рядок, з якого видаляємо символ. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+string Нова версія рядка без вказаного символу. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{string}\ s\ =\ \textcolor{stringliteral}{"{}banana"{}};}
+\DoxyCodeLine{\mbox{\hyperlink{header_8h_aaa63a88c6be33f66931b460577daa11b}{sanitize\_text}}(\textcolor{charliteral}{'a'},\ s);\ \textcolor{comment}{//\ поверне\ "{}bnn"{}}}
+
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\Hypertarget{header_8h_ad0dcc800fdcb8e716d50fa1622d10a25}\index{header.h@{header.h}!trim\_string@{trim\_string}}
+\index{trim\_string@{trim\_string}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{trim\_string()}{trim\_string()}}
+{\footnotesize\ttfamily \label{header_8h_ad0dcc800fdcb8e716d50fa1622d10a25} 
+string trim\+\_\+string (\begin{DoxyParamCaption}\item[{string \&}]{user\+\_\+string}{, }\item[{int}]{new\+\_\+lenght}{}\end{DoxyParamCaption})}
+
+
+
+Обрізає рядок до вказаної довжини. 
+
+
+\begin{DoxyParams}{Аргументи}
+{\em user\+\_\+string} & Посилання на рядок, який треба обрізати. \\
+\hline
+{\em new\+\_\+length} & Нова довжина рядка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Повертає}
+string Обрізаний рядок. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Застереження}
+Виводить повідомлення про помилку в консоль, якщо new\+\_\+lenght некоректна (від\textquotesingle{}ємна або більша за поточну довжину). 
+\end{DoxyWarning}

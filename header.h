@@ -1,3 +1,6 @@
+/// @file header.h
+/// @brief Заголовний файл для лабораторної роботи №2.
+/// @author Яцкова Ія
 #include <iostream>
 #include <string>
 #include <limits>
@@ -16,14 +19,10 @@ using namespace std;
 /// reverse_string(s); 
 /// // s стає "olleh" 
 /// @endcode 
-
 void reverse_string(string& user_str);
-
 /// @brief Виводить рядок у консоль посимвольно.
 /// @param user_str Рядок для виводу (передається як константа).
-
 void print_string(string user_str);
-
 /// @brief Перевіряє, чи є рядок паліндромом.
 /// Перевірка ігнорує регістр літер (A == a) та пробіли.
 /// @param user_str Посилання на рядок для перевірки.
@@ -31,24 +30,18 @@ void print_string(string user_str);
 /// @return false Якщо рядок не є паліндромом.
 /// @code
 /// string s = "Race Car";
-/// bool result = is_palindrome(s); // true
+/// bool result = is_polindrome(s); // true
 /// @endcode
-
 bool is_polindrome(string& user_str);
-
 /// @brief Підраховує кількість слів у рядку.
 /// Словом вважається будь-яка послідовність символів, розділена пробілами.
 /// @param user_str Вхідний рядок.
 /// @return int Кількість знайдених слів.
-
 int count_words(string user_str);
-
 /// @brief Аналізує частоту появи кожного слова в тексті.
 /// Результат виводиться безпосередньо в консоль у форматі: word [count].
 /// @param user_str Рядок для аналізу.
-
 void count_words_occurrences(string user_str);
-
 /// @brief Видаляє всі входження заданого символу з рядка.
 /// @param user_symbol Символ, який потрібно видалити.
 /// @param user_string Посилання на рядок, з якого видаляємо символ.
@@ -57,14 +50,11 @@ void count_words_occurrences(string user_str);
 /// string s = "banana";
 /// sanitize_text('a', s); // поверне "bnn"
 /// @endcode
-
 string sanitize_text(char user_symbol, string& user_string);
-
 /// @brief Обрізає рядок до вказаної довжини.
 /// @param user_string Посилання на рядок, який треба обрізати.
 /// @param new_length Нова довжина рядка.
 /// @return string Обрізаний рядок.
 /// @warning Виводить повідомлення про помилку в консоль, 
-/// якщо new_length некоректна (від'ємна або більша за поточну довжину).
-
+/// якщо new_lenght некоректна (від'ємна або більша за поточну довжину).
 string trim_string(string &user_string, int new_lenght);
