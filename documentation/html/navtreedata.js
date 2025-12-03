@@ -25,6 +25,12 @@
 var NAVTREE =
 [
   [ "spt_lab_2", "index.html", [
+    [ "software_development_tools_lab_1", "md__r_e_a_d_m_e.html", [
+      [ "Features", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Technologies", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Project structure", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
+    ] ],
     [ "Файли", "files.html", [
       [ "Файли", "files.html", "files_dup" ],
       [ "Елементи файлу", "globals.html", [

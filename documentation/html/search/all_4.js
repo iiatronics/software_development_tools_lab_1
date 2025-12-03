@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reverse_5fstring_0',['reverse_string',['../header_8h.html#a53cb1a503cd1b494978a4b76b0f59c62',1,'header.h']]]
+  ['is_5fpolindrome_0',['is_polindrome',['../header_8h.html#a801260d210038ef703d28f6b8a735c31',1,'functions.cpp']]]
 ];

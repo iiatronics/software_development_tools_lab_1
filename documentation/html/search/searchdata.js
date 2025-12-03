@@ -1,21 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "chiprst",
+  0: "cdfhiprst",
   1: "h",
-  2: "ciprst"
+  2: "ciprst",
+  3: "dfpst"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "files",
-  2: "functions"
+  2: "functions",
+  3: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "Всі",
   1: "Файли",
-  2: "Функції"
+  2: "Функції",
+  3: "Сторінки"
 };
 
