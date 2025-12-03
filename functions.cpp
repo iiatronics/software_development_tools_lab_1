@@ -137,7 +137,7 @@ string trim_string(string& user_string, int new_lenght)
         new_str.push_back(user_string[i]);
         user_string[i] = 0;
     }
-
+    
     for (int i = 0; i < new_str.size(); i++)
     {
         user_string[i] = new_str[i];
